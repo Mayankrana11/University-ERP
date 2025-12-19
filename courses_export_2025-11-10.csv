@@ -1,0 +1,4 @@
+course_id,course_name,instructor_name,credits,capacity,semester,year
+1,"Data Structures",inst1,4,30,Fall,2025
+2,"Algorithms",inst1,3,30,Fall,2025
+3,"Database Systems",inst1,4,30,Fall,2025

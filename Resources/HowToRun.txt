@@ -1,0 +1,67 @@
+UNIVERSITY ERP - HOW TO RUN GUIDE
+========================================================================
+
+1. PREREQUISITES
+----------------
+- Java JDK 17 or higher
+- MySQL Server (running on localhost:3306)
+- Libraries are included in the /lib folder
+
+2. CRITICAL: DATABASE CONFIGURATION
+-----------------------------------
+Before running, you MUST ensure the database password matches your system.
+1. Navigate to: src/edu/univ/erp/data/DatabaseConnection.java
+2. Open the file and update these lines with YOUR MySQL credentials:
+   
+   private static final String USER = "root";  <-- Change if needed
+   private static final String PASS = "YOUR_PASSWORD"; <-- CRITICAL! Change this!
+
+3. SETUP THE DATABASE
+---------------------
+Run these SQL scripts in your MySQL Workbench or Client in this exact order:
+1. sql/auth_db_setup.sql   (Creates Auth Database)
+2. sql/erp_db_setup.sql    (Creates ERP Database)
+3. sql/seed_data.sql       (Inserts test users)
+
+4. HOW TO COMPILE & RUN
+-----------------------
+Open a terminal in the main project folder (AP_PROJECT).
+
+A. Windows (Command Prompt / PowerShell):
+   --------------------------------------
+   Step 1 (Compile):
+   javac -cp "lib/*" -d out (Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName })
+
+   Step 2 (Run):
+   java -cp "lib/*;out" edu.univ.erp.App 
+
+B. Mac / Linux:
+   ------------
+   Step 1 (Compile):
+   javac -d out -cp "lib/*:src" src/edu/univ/erp/util/App.java
+
+   Step 2 (Run):
+   java -cp "lib/*:out" edu.univ.erp.util.App
+
+5. DEFAULT LOGIN CREDENTIALS
+----------------------------
+(Password is 'password' for all accounts)
+
+Role        | Username       | Notes
+------------|----------------|---------------------------
+Admin       | admin1         | Has full access
+Instructor  | inst1          | Teaches Data Structures
+Instructor  | MAYANK RANA    | Teaches Discrete Maths
+Student     | student1       | Enrolled student
+Student     | student2       | Enrolled student
+Student     | Mukul          | Enrolled student
+
+
+🔑 Default Logins
+Role	          Username	       Password
+Admin	          admin1	          admin123
+Instructor	    inst1	          inst123
+Student	       student1	       student123
+Student2	       student2	       student2123
+Student3	       student3	       student3123
+Instructor      MAYANK RANA       MAYANK123
