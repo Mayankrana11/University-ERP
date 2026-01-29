@@ -23,7 +23,7 @@ Before running the application, you **must** ensure the database credentials mat
 
    ```java
    private static final String USER = "root";        // Change if needed
-   private static final String PASS = "YOUR_PASSWORD"; // ⚠️ CRITICAL: change this
+   private static final String PASS = "YOUR_PASSWORD"; //  CRITICAL: change this
    ```
 
 ---
@@ -95,7 +95,7 @@ java -cp "lib/*:out" edu.univ.erp.App
 
 ---
 
-## 🔐 Important Notes
+##  Important Notes
 
 - Ensure MySQL service is **running** before launching the application  
 - Incorrect database credentials will prevent the application from starting  
@@ -103,7 +103,7 @@ java -cp "lib/*:out" edu.univ.erp.App
 
 ---
 
-## ✅ You’re Ready to Go!
+##  You’re Ready to Go!
 
 Once the database is set up and credentials are configured, the ERP system should launch successfully with the login screen.
 
