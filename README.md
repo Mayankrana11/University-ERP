@@ -1,3 +1,13 @@
+---
+
+## 🤝 Credits
+
+This project was developed as a group effort.  
+Special acknowledgement to **Mukul (2024359)** for contributing and assisting in the development of this project as a group member 🙌
+
+---
+
+
 # UNIVERSITY ERP – HOW TO RUN GUIDE
 
 ---
